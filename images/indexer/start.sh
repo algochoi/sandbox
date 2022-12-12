@@ -17,7 +17,7 @@ start_with_algod() {
 
   # wait for algod to start
   for i in 1 2 3 4 5; do
-    wget "${ALGOD_ADDR}"/genesis && break
+    wget "${ALGOD_ADDR}"/genesis || break
     echo "Algod not responding... waiting."
     sleep 15
   done
